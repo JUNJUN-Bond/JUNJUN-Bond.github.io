@@ -1,0 +1,9 @@
+/* Here is your custom css styles. */
+* {
+    cursor: url("/medias/imgs/zhengchang.ico"),auto !important;
+}
+
+:active {
+    cursor: url("/medias/imgs/dianji.ico"),auto !important;
+}
+
