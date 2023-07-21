@@ -4,17 +4,71 @@
   
     
     <entry>
+      <title>二叉树学前先看！！！</title>
+      <link href="/2023/07/22/1-fu-ben-fu-ben/"/>
+      <url>/2023/07/22/1-fu-ben-fu-ben/</url>
+      
+        <content type="html"><![CDATA[<h1 id="这里是二叉树系列的一些注意事项"><a href="#这里是二叉树系列的一些注意事项" class="headerlink" title="这里是二叉树系列的一些注意事项"></a>这里是二叉树系列的一些注意事项</h1><h2 id="1-这是二叉树系列默认的数据结构"><a href="#1-这是二叉树系列默认的数据结构" class="headerlink" title="1.这是二叉树系列默认的数据结构"></a>1.这是二叉树系列默认的数据结构</h2><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">typedef</span> <span class="token keyword">struct</span>  TreeNode<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token keyword">char</span> data<span class="token punctuation">;</span>    <span class="token keyword">struct</span>  TreeNode<span class="token operator">*</span> lchild<span class="token punctuation">;</span>    <span class="token keyword">struct</span>  TreeNode<span class="token operator">*</span> rchild<span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>Tree<span class="token punctuation">,</span> <span class="token operator">*</span> tree<span class="token punctuation">;</span><span class="token keyword">typedef</span> <span class="token keyword">struct</span> aa<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>     tree data<span class="token punctuation">[</span>MAXSIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token keyword">int</span> front<span class="token punctuation">;</span>    <span class="token keyword">int</span> rear<span class="token punctuation">;</span>      <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>qqq<span class="token punctuation">,</span><span class="token operator">*</span>queue<span class="token punctuation">;</span></code></pre><h2 id="2-关于-字符"><a href="#2-关于-字符" class="headerlink" title="2.关于{}字符"></a>2.关于{}字符</h2><h3 id="先说结论-似乎比较麻烦"><a href="#先说结论-似乎比较麻烦" class="headerlink" title="先说结论 似乎比较麻烦"></a>先说结论 似乎比较麻烦</h3><p>如果你想在Markdown中直接输出}字符而不进行任何转义，可以使用反斜杠（\）进行转义。在Markdown中，反斜杠用于转义特殊字符，包括Markdown的语法字符以及HTML实体编码。<br>不过这仅仅是在文本区域内有效，如果是在代码块使用“{”,他会返回 “&amp;#123;”：<br>这是因为在Markdown的代码块中使用反斜杠加大括号{时，它可能会被渲染为HTML实体编码&#123;，这是因为Markdown解析器可能会在渲染过程中对一些字符进行自动转义。<br>所以之后你会看到一些  <strong>&amp;#123 ;</strong> 和 <strong>&amp;#125 ;</strong>  就像上面那样<br><strong>不用疑惑，他们只是  ”{“  、 ”}“  而已</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构-二叉树 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 二叉树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>二叉树的建立</title>
+      <link href="/2023/07/21/1-fu-ben/"/>
+      <url>/2023/07/21/1-fu-ben/</url>
+      
+        <content type="html"><![CDATA[<h1 id="二叉树的建立-基于三种遍历"><a href="#二叉树的建立-基于三种遍历" class="headerlink" title="二叉树的建立(基于三种遍历)"></a>二叉树的建立(基于三种遍历)</h1><h4 id="当我们谈到二叉树的建立时，通常会涉及三种遍历形式：前序遍历、中序遍历和后序遍历。这些遍历形式都可以用来构建一个二叉树。"><a href="#当我们谈到二叉树的建立时，通常会涉及三种遍历形式：前序遍历、中序遍历和后序遍历。这些遍历形式都可以用来构建一个二叉树。" class="headerlink" title="当我们谈到二叉树的建立时，通常会涉及三种遍历形式：前序遍历、中序遍历和后序遍历。这些遍历形式都可以用来构建一个二叉树。"></a>当我们谈到二叉树的建立时，通常会涉及三种遍历形式：前序遍历、中序遍历和后序遍历。这些遍历形式都可以用来构建一个二叉树。</h4><h3 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h3><p>前序遍历（Preorder Traversal）：在前序遍历中，根节点首先被访问，然后按照左子树、右子树的顺序递归进行遍历。<br>步骤：</p><p>创建一个新节点，并将其值设置为当前元素。<br>如果有左子树，递归调用前序遍历函数，将左子树作为当前节点。<br>如果有右子树，递归调用前序遍历函数，将右子树作为当前节点。</p><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">LDR</span><span class="token punctuation">(</span>tree bt<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//前序遍历</span><span class="token operator">&amp;</span>#<span class="token number">123</span>   <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token punctuation">)</span>    \<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> bt<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>lchild<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>rchild<span class="token punctuation">)</span><span class="token punctuation">;</span>    \<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>  \<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre><h3 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h3><p>中序遍历（Inorder Traversal）：在中序遍历中，左子树首先被访问，然后是根节点，最后是右子树。<br>步骤：</p><p>如果有左子树，递归调用中序遍历函数，将左子树作为当前节点。<br>创建一个新节点，并将其值设置为当前元素。<br>如果有右子树，递归调用中序遍历函数，将右子树作为当前节点。</p><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">LDR</span><span class="token punctuation">(</span>tree bt<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//中序遍历</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token punctuation">)</span>    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>lchild<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> bt<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>rchild<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre><h3 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h3><p>后序遍历（Postorder Traversal）：在后序遍历中，首先访问左子树，然后是右子树，最后是根节点。<br>步骤：</p><p>如果有左子树，递归调用后序遍历函数，将左子树作为当前节点。<br>如果有右子树，递归调用后序遍历函数，将右子树作为当前节点。<br>创建一个新节点，并将其值设置为当前元素。</p><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">LDR</span><span class="token punctuation">(</span>tree bt<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//后序遍历</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token punctuation">)</span>    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>lchild<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>rchild<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> bt<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>    \<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>  \<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre><h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>  三种遍历的本质毫无疑问是一样的， “前、中、后”只是代表了“根”在访问中相对于左右孩子的顺序。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构-二叉树 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+            <tag> 二叉树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>鸡棚塌了</title>
       <link href="/2023/07/18/1/"/>
       <url>/2023/07/18/1/</url>
       
-        <content type="html"><![CDATA[<h1 id="欢迎来到猪猪侠的博客！"><a href="#欢迎来到猪猪侠的博客！" class="headerlink" title="欢迎来到猪猪侠的博客！"></a>欢迎来到猪猪侠的博客！</h1><h2 id="关于猪猪侠"><a href="#关于猪猪侠" class="headerlink" title="关于猪猪侠"></a>关于猪猪侠</h2><p>猪猪侠是一个可爱又勇敢的超级英雄，他以其超强的力量和机智的头脑保护城市免受邪恶势力的侵害。猪猪侠热爱正义，总是乐于助人，是孩子们心目中的英雄。</p><h2 id="猪猪侠的冒险故事"><a href="#猪猪侠的冒险故事" class="headerlink" title="猪猪侠的冒险故事"></a>猪猪侠的冒险故事</h2><h3 id="第一章：猪猪侠的起源"><a href="#第一章：猪猪侠的起源" class="headerlink" title="第一章：猪猪侠的起源"></a>第一章：猪猪侠的起源</h3><p>猪猪侠小时候是一个普通的小猪，直到一天，他发现自己拥有了超人般的力量。他决定利用这些力量保护无辜的人们，并打击罪恶的势力。</p><h3 id="第二章：猪猪侠与邪恶博士的对决"><a href="#第二章：猪猪侠与邪恶博士的对决" class="headerlink" title="第二章：猪猪侠与邪恶博士的对决"></a>第二章：猪猪侠与邪恶博士的对决</h3><p>邪恶博士是一个疯狂的科学家，他计划利用科技来征服整个城市。猪猪侠必须与邪恶博士展开一场激烈的战斗，拯救城市于水深火热之中。</p><h3 id="第三章：猪猪侠的伙伴们"><a href="#第三章：猪猪侠的伙伴们" class="headerlink" title="第三章：猪猪侠的伙伴们"></a>第三章：猪猪侠的伙伴们</h3><p>猪猪侠并不孤单，他有一群忠诚的伙伴，包括机智的狐狸小王子、勇敢的小熊布朗等等。他们共同组成了一个超级英雄团队，为了正义而战斗。</p><h2 id="加入猪猪侠的粉丝团"><a href="#加入猪猪侠的粉丝团" class="headerlink" title="加入猪猪侠的粉丝团"></a>加入猪猪侠的粉丝团</h2><p>如果你也喜欢猪猪侠，想要了解更多关于他的故事和冒险，欢迎加入我们的粉丝团。你可以在下面留言，与其他猪猪侠的粉丝交流，分享你对猪猪侠的喜爱和支持。</p><h2 id="联系猪猪侠"><a href="#联系猪猪侠" class="headerlink" title="联系猪猪侠"></a>联系猪猪侠</h2><p>如果你有任何问题或者建议，想要联系猪猪侠，你可以发送电子邮件到 <code>contact@GGBOND.com</code> </p><p>谢谢你的支持，猪猪侠期待与你分享更多的冒险故事！</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="欢迎来到猪猪侠的博客！"><a href="#欢迎来到猪猪侠的博客！" class="headerlink" title="欢迎来到猪猪侠的博客！"></a>欢迎来到猪猪侠的博客！</h1><h2 id="关于猪猪侠"><a href="#关于猪猪侠" class="headerlink" title="关于猪猪侠"></a>关于猪猪侠</h2><p>猪猪侠是一个可爱又勇敢的超级英雄，他以其超强的力量和机智的头脑保护城市免受邪恶势力的侵害。猪猪侠热爱正义，总是乐于助人，是孩子们心目中的英雄。</p><h2 id="猪猪侠的冒险故事"><a href="#猪猪侠的冒险故事" class="headerlink" title="猪猪侠的冒险故事"></a>猪猪侠的冒险故事</h2><h3 id="第一章：猪猪侠的起源"><a href="#第一章：猪猪侠的起源" class="headerlink" title="第一章：猪猪侠的起源"></a>第一章：猪猪侠的起源</h3><p>猪猪侠小时候是一个普通的小猪，直到一天，他发现自己拥有了超人般的力量。他决定利用这些力量保护无辜的人们，并打击罪恶的势力。</p><h3 id="第二章：猪猪侠与邪恶博士的对决"><a href="#第二章：猪猪侠与邪恶博士的对决" class="headerlink" title="第二章：猪猪侠与邪恶博士的对决"></a>第二章：猪猪侠与邪恶博士的对决</h3><p>邪恶博士是一个疯狂的科学家，他计划利用科技来征服整个城市。猪猪侠必须与邪恶博士展开一场激烈的战斗，拯救城市于水深火热之中。</p><h3 id="第三章：猪猪侠的伙伴们"><a href="#第三章：猪猪侠的伙伴们" class="headerlink" title="第三章：猪猪侠的伙伴们"></a>第三章：猪猪侠的伙伴们</h3><p>猪猪侠并不孤单，他有一群忠诚的伙伴，包括机智的狐狸小王子、勇敢的小熊布朗等等。他们共同组成了一个超级英雄团队，为了正义而战斗。</p><h2 id="加入猪猪侠的粉丝团"><a href="#加入猪猪侠的粉丝团" class="headerlink" title="加入猪猪侠的粉丝团"></a>加入猪猪侠的粉丝团</h2><p>如果你也喜欢猪猪侠，想要了解更多关于他的故事和冒险，欢迎加入我们的粉丝团。你可以在下面留言，与其他猪猪侠的粉丝交流，分享你对猪猪侠的喜爱和支持。</p><h2 id="联系猪猪侠"><a href="#联系猪猪侠" class="headerlink" title="联系猪猪侠"></a>联系猪猪侠</h2><p>如果你有任何问题或者建议，想要联系猪猪侠，你可以发送电子邮件到 <code>3309266223@qq.com</code> </p><p>谢谢你的支持，猪猪侠期待与你分享更多的冒险故事！</p>]]></content>
       
       
       
         <tags>
             
-            <tag> -杂谈 </tag>
+            <tag> 杂谈 </tag>
             
         </tags>
       
