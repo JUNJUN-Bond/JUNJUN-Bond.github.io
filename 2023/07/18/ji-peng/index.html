@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="二叉树的建立, 广州队长超人强">
+    <meta name="keywords" content="鸡棚塌了, 广州队长超人强">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>二叉树的建立 | 广州队长超人强</title>
+    <title>鸡棚塌了 | 广州队长超人强</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -320,12 +320,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">二叉树的建立</h1>
+                    <h1 class="description center-align post-title">鸡棚塌了</h1>
                 </div>
             </div>
         </div>
@@ -441,27 +441,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
-                            </a>
-                        
-                            <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                                <span class="chip bg-color">二叉树</span>
+                            <a href="/tags/%E6%9D%82%E8%B0%88/">
+                                <span class="chip bg-color">杂谈</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91/" class="post-category">
-                                数据结构-二叉树
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -470,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-07-21
+                    2023-07-18
                 </div>
                 
 
@@ -484,7 +471,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    520
+                    426
                 </div>
                 
 
@@ -511,45 +498,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="二叉树的建立-基于三种遍历"><a href="#二叉树的建立-基于三种遍历" class="headerlink" title="二叉树的建立(基于三种遍历)"></a>二叉树的建立(基于三种遍历)</h1><h4 id="当我们谈到二叉树的建立时，通常会涉及三种遍历形式：前序遍历、中序遍历和后序遍历。这些遍历形式都可以用来构建一个二叉树。"><a href="#当我们谈到二叉树的建立时，通常会涉及三种遍历形式：前序遍历、中序遍历和后序遍历。这些遍历形式都可以用来构建一个二叉树。" class="headerlink" title="当我们谈到二叉树的建立时，通常会涉及三种遍历形式：前序遍历、中序遍历和后序遍历。这些遍历形式都可以用来构建一个二叉树。"></a>当我们谈到二叉树的建立时，通常会涉及三种遍历形式：前序遍历、中序遍历和后序遍历。这些遍历形式都可以用来构建一个二叉树。</h4><h3 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h3><p>前序遍历（Preorder Traversal）：在前序遍历中，根节点首先被访问，然后按照左子树、右子树的顺序递归进行遍历。<br>步骤：</p>
-<p>创建一个新节点，并将其值设置为当前元素。<br>如果有左子树，递归调用前序遍历函数，将左子树作为当前节点。<br>如果有右子树，递归调用前序遍历函数，将右子树作为当前节点。</p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">LDR</span><span class="token punctuation">(</span>tree bt<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//前序遍历</span>
-<span class="token operator">&amp;</span>#<span class="token number">123</span>   <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token punctuation">)</span>
-    \<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> bt<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>lchild<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>rchild<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    \<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  
-\<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<h3 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h3><p>中序遍历（Inorder Traversal）：在中序遍历中，左子树首先被访问，然后是根节点，最后是右子树。<br>步骤：</p>
-<p>如果有左子树，递归调用中序遍历函数，将左子树作为当前节点。<br>创建一个新节点，并将其值设置为当前元素。<br>如果有右子树，递归调用中序遍历函数，将右子树作为当前节点。</p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">LDR</span><span class="token punctuation">(</span>tree bt<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//中序遍历</span>
-<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>lchild<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> bt<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>rchild<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<h3 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h3><p>后序遍历（Postorder Traversal）：在后序遍历中，首先访问左子树，然后是右子树，最后是根节点。<br>步骤：</p>
-<p>如果有左子树，递归调用后序遍历函数，将左子树作为当前节点。<br>如果有右子树，递归调用后序遍历函数，将右子树作为当前节点。<br>创建一个新节点，并将其值设置为当前元素。</p>
-<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">LDR</span><span class="token punctuation">(</span>tree bt<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//后序遍历</span>
-<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token punctuation">)</span>
-    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>lchild<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">LDR</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>rchild<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%c"</span><span class="token punctuation">,</span> bt<span class="token operator">-</span><span class="token operator">></span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    \<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  
-\<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>  三种遍历的本质毫无疑问是一样的， “前、中、后”只是代表了“根”在访问中相对于左右孩子的顺序。</p>
+                <h1 id="欢迎来到猪猪侠的博客！"><a href="#欢迎来到猪猪侠的博客！" class="headerlink" title="欢迎来到猪猪侠的博客！"></a>欢迎来到猪猪侠的博客！</h1><h2 id="关于猪猪侠"><a href="#关于猪猪侠" class="headerlink" title="关于猪猪侠"></a>关于猪猪侠</h2><p>猪猪侠是一个可爱又勇敢的超级英雄，他以其超强的力量和机智的头脑保护城市免受邪恶势力的侵害。猪猪侠热爱正义，总是乐于助人，是孩子们心目中的英雄。</p>
+<h2 id="猪猪侠的冒险故事"><a href="#猪猪侠的冒险故事" class="headerlink" title="猪猪侠的冒险故事"></a>猪猪侠的冒险故事</h2><h3 id="第一章：猪猪侠的起源"><a href="#第一章：猪猪侠的起源" class="headerlink" title="第一章：猪猪侠的起源"></a>第一章：猪猪侠的起源</h3><p>猪猪侠小时候是一个普通的小猪，直到一天，他发现自己拥有了超人般的力量。他决定利用这些力量保护无辜的人们，并打击罪恶的势力。</p>
+<h3 id="第二章：猪猪侠与邪恶博士的对决"><a href="#第二章：猪猪侠与邪恶博士的对决" class="headerlink" title="第二章：猪猪侠与邪恶博士的对决"></a>第二章：猪猪侠与邪恶博士的对决</h3><p>邪恶博士是一个疯狂的科学家，他计划利用科技来征服整个城市。猪猪侠必须与邪恶博士展开一场激烈的战斗，拯救城市于水深火热之中。</p>
+<h3 id="第三章：猪猪侠的伙伴们"><a href="#第三章：猪猪侠的伙伴们" class="headerlink" title="第三章：猪猪侠的伙伴们"></a>第三章：猪猪侠的伙伴们</h3><p>猪猪侠并不孤单，他有一群忠诚的伙伴，包括机智的狐狸小王子、勇敢的小熊布朗等等。他们共同组成了一个超级英雄团队，为了正义而战斗。</p>
+<h2 id="加入猪猪侠的粉丝团"><a href="#加入猪猪侠的粉丝团" class="headerlink" title="加入猪猪侠的粉丝团"></a>加入猪猪侠的粉丝团</h2><p>如果你也喜欢猪猪侠，想要了解更多关于他的故事和冒险，欢迎加入我们的粉丝团。你可以在下面留言，与其他猪猪侠的粉丝交流，分享你对猪猪侠的喜爱和支持。</p>
+<h2 id="联系猪猪侠"><a href="#联系猪猪侠" class="headerlink" title="联系猪猪侠"></a>联系猪猪侠</h2><p>如果你有任何问题或者建议，想要联系猪猪侠，你可以发送电子邮件到 <code>3309266223@qq.com</code> </p>
+<p>谢谢你的支持，猪猪侠期待与你分享更多的冒险故事！</p>
 
                 
             </div>
@@ -576,7 +531,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://junjun-bond.github.io/2023/07/21/1-fu-ben/">https://junjun-bond.github.io/2023/07/21/1-fu-ben/</a>
+                    <a href="https://junjun-bond.github.io/2023/07/18/ji-peng/">https://junjun-bond.github.io/2023/07/18/ji-peng/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -614,12 +569,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
-                                </a>
-                            
-                                <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                                    <span class="chip bg-color">二叉树</span>
+                                <a href="/tags/%E6%9D%82%E8%B0%88/">
+                                    <span class="chip bg-color">杂谈</span>
                                 </a>
                             
                         </div>
@@ -793,24 +744,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/07/22/1-fu-ben-fu-ben/">
+                <a href="/2023/07/21/jian-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="二叉树学前先看！！！">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="二叉树的建立">
                         
-                        <span class="card-title">二叉树学前先看！！！</span>
+                        <span class="card-title">二叉树的建立</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一些注意事项
+                            
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-22
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-21
                         </span>
                         <span class="publish-author">
                             
@@ -846,24 +797,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/07/18/1/">
+                <a href="/2023/07/17/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="鸡棚塌了">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">鸡棚塌了</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我是Bond...GG Bond!
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-17
                             </span>
                         <span class="publish-author">
                             
@@ -872,14 +823,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9D%82%E8%B0%88/">
-                        <span class="chip bg-color">杂谈</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1063,7 +1006,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.3k</span>&nbsp;字
+                class="white-color">2.1k</span>&nbsp;字
             
             
             
