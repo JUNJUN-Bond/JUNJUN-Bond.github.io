@@ -477,21 +477,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-07-22
+                    2023-07-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    410
+                    505
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -550,8 +550,24 @@
     <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>以上三种操作都可以通过遍历简单完成，但是删除不一样；<br>1.删去结点需要释放它所占用的空间（free）;<br>2.需要考虑到删除的节点并非叶子的情况，我们该如何操作？<br>这里提供一个思路：<br>找到要删除的节点，判断是否为叶子结点，若不为，则我们先清楚父节点对其的指针，<br>然后将</p>
-<pre class=" language-cpp"><code class="language-cpp">
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>以上三种操作都可以通过遍历简单完成，但是删除不一样；<br>1.删去结点需要释放它所占用的空间（free）;<br>2.需要考虑到删除的节点并非叶子的情况，我们该如何操作？<br>这里提供一个思路：<br>找到要删除的节点，判断是否为叶子结点，若不为，则我们先清除父节点对其的指针，<br>然后用对其及其子树使用后根遍历的方式进行删除；（代码没有体现，留给读者思考）</p>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">deletetree</span><span class="token punctuation">(</span>tree bt<span class="token punctuation">,</span> <span class="token keyword">char</span> ch<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//删除</span>
+<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>lchild <span class="token operator">&amp;&amp;</span> bt<span class="token operator">-</span><span class="token operator">></span>lchild<span class="token operator">-</span><span class="token operator">></span>data <span class="token operator">==</span> ch<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">free</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>lchild<span class="token punctuation">)</span><span class="token punctuation">;</span> bt<span class="token operator">-</span><span class="token operator">></span>lchild <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>rchild <span class="token operator">&amp;&amp;</span> bt<span class="token operator">-</span><span class="token operator">></span>rchild<span class="token operator">-</span><span class="token operator">></span>data <span class="token operator">==</span> ch<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token function">free</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>rchild<span class="token punctuation">)</span><span class="token punctuation">;</span> bt<span class="token operator">-</span><span class="token operator">></span>rchild <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token function">deletetree</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>lchild<span class="token punctuation">,</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">deletetree</span><span class="token punctuation">(</span>bt<span class="token operator">-</span><span class="token operator">></span>rchild<span class="token punctuation">,</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
 </code></pre>
 
                 
@@ -1074,7 +1090,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.1k</span>&nbsp;字
+                class="white-color">2.6k</span>&nbsp;字
             
             
             
