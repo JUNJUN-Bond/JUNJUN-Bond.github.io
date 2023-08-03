@@ -1,5 +1,5 @@
 # JUNJUN-Bond Blog
-这是基于Hexo和Mater主题搭建的个人博客网站。
+这是基于Hexo和Matery主题搭建的个人博客网站。
 ## 安装
 1. 克隆该项目到本地：
 ```bash
